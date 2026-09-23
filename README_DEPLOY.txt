@@ -97,3 +97,18 @@ git commit -m "Expanded 2026 Summit supply chain challenge"
 git branch -M main
 git remote add origin https://github.com/jenkinsmt4985/ETSU-SUMMIT-SUPPLY-CHAIN-CHALLENGE.git
 git push -u origin main
+
+
+HARDER-TRADEOFF REVISION
+This edition intentionally makes the decisions less obvious:
+- No choice is labeled with giveaway terms such as "high risk," "narrow objective,"
+  "best," or "strongest" before the player selects it.
+- Each option has a credible business rationale and real advantages.
+- The top scores are closer together so tradeoffs matter.
+- Several rounds use a hybrid/phased strategy as the best expected portfolio response.
+- Choice cards show neutral decision terms rather than evaluative hints.
+- The correct answer depends on the stated assumptions; alternatives can be defensible
+  under a different risk appetite, demand outlook, or strategic priority.
+
+UPDATED MAXIMUM SCORE
+635 points.
