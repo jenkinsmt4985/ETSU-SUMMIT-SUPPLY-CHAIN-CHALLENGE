@@ -139,3 +139,64 @@ Key changes:
 
 This is intentionally designed as a multi-objective decision simulation rather than
 a multiple-choice quiz.
+
+
+FINAL-PAGE CORRECTION
+- Removed ALL clickable professional/source links from every presenter/workshop bio.
+- Added an explicit participant list based on the current public Eventbrite
+  lineup, agenda, and workshop hosts:
+  Ken York
+  Nathan Swisshelm
+  Ryan Berkley
+  Jason Thorne
+  Yamilla Libutti
+  Kenneth Perry
+  Jim Thornstrom
+  Dr. Chris Libutti
+  Mark Sebby
+- Expanded the final page with full workshop descriptions for:
+  AI in Supply Chain: Turning Emerging Technology into Business Value
+  Critical Thinking in the Age of AI: An Interactive Supply Chain Workshop
+  Lean Six Sigma: Driving Process Improvement and Operational Excellence
+- Added all three workshops directly to the final registration call-to-action card.
+
+PRESENTER LIST UPDATE
+Matthew Jenkins was removed from the participant/bio section at the user's request.
+
+
+PARTICIPANT UPDATE
+Added:
+Rohan Korde, Ph.D.
+Assistant Professor of Supply Chain Management
+East Tennessee State University
+
+Bio supplied by the user:
+Dr. Korde studies problems in the movement of physical goods in global supply networks
+as well as the financing mechanisms among the various intermediaries. He also studies
+coordination, competition, cooperation, and coopetition dynamics between organizations
+to improve supply-chain efficiency and flexibility.
+
+COPY EDIT
+Reworked visible website language to sound more natural and less templated.
+Removed awkward labels such as "fictional company," "real-world next step,"
+"real conversations continue," and "decision logic is defensible."
+Also rebuilt the speaker section to correct HTML nesting and remove a leftover
+Matthew Jenkins paragraph.
+
+
+ETSU BBA PROGRAM PROMO
+Added an animated ETSU Supply Chain Management recruitment card at the bottom of the
+final page, inspired by the current ETSU BBA Supply Chain Management program page.
+
+Program themes represented:
+- analytical skills, leadership, strategic thinking and modern technology
+- Supply Chain Leadership concentration
+- Supply Chain Marketing concentration
+- Supply Chain Operations and Analytics concentration
+- hands-on learning through internships, study tours, consulting projects, student
+  organizations and competitions
+- careers including supply chain analyst, demand planner, purchasing manager,
+  operations manager, logistics manager and supply chain manager
+
+Program link:
+https://www.etsu.edu/cbat/management-supply-chain/supply-chain.php

@@ -86,6 +86,151 @@ button,.cta{border:0;border-radius:8px;padding:11px 15px;min-height:44px;font-we
 .cash-negative{color:#b42318!important}
 .cash-positive{color:#157347!important}
 
+
+/* ETSU Supply Chain Management recruitment animation */
+.scm-promo{
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(135deg,#041E42 0%,#082c60 58%,#041E42 100%);
+  border:1px solid rgba(255,255,255,.16);
+  border-top:7px solid var(--gold);
+  border-radius:12px;
+  padding:24px;
+  margin-top:18px;
+  color:white;
+}
+.scm-promo::before{
+  content:"";
+  position:absolute;
+  width:280px;height:280px;
+  border:1px solid rgba(255,199,44,.14);
+  border-radius:50%;
+  right:-100px;top:-130px;
+}
+.scm-promo::after{
+  content:"";
+  position:absolute;
+  width:180px;height:180px;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:50%;
+  right:-40px;top:-70px;
+}
+.scm-promo-head{
+  position:relative;z-index:2;
+  display:flex;align-items:center;gap:15px;flex-wrap:wrap;
+}
+.scm-promo-shield{
+  width:58px;height:66px;object-fit:contain;
+  animation:scmFloat 3.8s ease-in-out infinite;
+}
+.scm-promo-title{min-width:0;flex:1}
+.scm-promo-title .mini{
+  color:var(--gold);font-size:11px;font-weight:900;
+  text-transform:uppercase;letter-spacing:.12em;
+}
+.scm-promo-title h2{
+  color:white;margin:3px 0 5px;font-size:30px;line-height:1.08;
+}
+.scm-promo-title p{
+  color:#e5edf5;margin:0;max-width:850px;line-height:1.5;font-size:14px;
+}
+.scm-flow{
+  position:relative;z-index:2;
+  display:grid;
+  grid-template-columns:repeat(7,minmax(0,1fr));
+  align-items:center;
+  gap:6px;
+  margin:21px 0 16px;
+}
+.scm-node{
+  min-height:92px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:10px;
+  padding:11px 8px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  animation:scmPulse 4s ease-in-out infinite;
+}
+.scm-node:nth-child(3){animation-delay:.55s}
+.scm-node:nth-child(5){animation-delay:1.1s}
+.scm-node:nth-child(7){animation-delay:1.65s}
+.scm-node .ico{font-size:25px;margin-bottom:5px}
+.scm-node b{font-size:12px;color:white}
+.scm-node span{font-size:10px;color:#cdd9e6;margin-top:3px;line-height:1.25}
+.scm-arrow{
+  position:relative;height:4px;background:rgba(255,199,44,.25);
+  border-radius:999px;overflow:hidden;
+}
+.scm-arrow::after{
+  content:"";
+  position:absolute;top:0;left:-55%;height:100%;width:52%;
+  background:var(--gold);border-radius:999px;
+  animation:scmMove 2.1s linear infinite;
+}
+.scm-highlights{
+  position:relative;z-index:2;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:12px;
+}
+.scm-highlight{
+  background:white;color:var(--ink);
+  border-radius:9px;padding:12px;border-bottom:4px solid var(--gold);
+}
+.scm-highlight b{display:block;color:var(--blue);font-size:14px;margin-bottom:4px}
+.scm-highlight span{font-size:11px;line-height:1.4;color:#5b6875}
+.scm-realworld{
+  position:relative;z-index:2;
+  margin-top:13px;
+  display:grid;grid-template-columns:1.15fr .85fr;gap:12px;align-items:stretch;
+}
+.scm-realworld-copy{
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.17);
+  border-radius:9px;padding:14px;
+}
+.scm-realworld-copy h3{color:white;margin:0 0 5px;font-size:18px}
+.scm-realworld-copy p{color:#dbe5ef;margin:0;line-height:1.5;font-size:12px}
+.scm-careers{
+  display:grid;grid-template-columns:1fr 1fr;gap:6px;
+}
+.scm-career{
+  background:rgba(255,199,44,.12);
+  border:1px solid rgba(255,199,44,.26);
+  border-radius:8px;padding:9px;
+  color:white;font-size:11px;font-weight:800;text-align:center;
+}
+.scm-promo-cta{
+  position:relative;z-index:2;
+  display:flex;justify-content:center;align-items:center;gap:10px;
+  flex-wrap:wrap;margin-top:16px;
+}
+.scm-link{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:48px;padding:12px 18px;border-radius:8px;
+  background:var(--gold);color:var(--blue);
+  font-weight:900;text-decoration:none;border:2px solid var(--gold);
+  transition:transform .18s ease,background .18s ease;
+}
+.scm-link:hover{transform:translateY(-2px);background:#ffd45b}
+.scm-promo-note{font-size:11px;color:#cbd7e2}
+@keyframes scmMove{0%{left:-55%}100%{left:110%}}
+@keyframes scmPulse{0%,100%{transform:translateY(0);border-color:rgba(255,255,255,.18)}50%{transform:translateY(-3px);border-color:rgba(255,199,44,.65)}}
+@keyframes scmFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@media(max-width:800px){
+  .scm-flow{grid-template-columns:1fr}
+  .scm-arrow{width:4px;height:26px;margin:auto}
+  .scm-arrow::after{width:100%;height:52%;left:0;top:-55%;animation:scmMoveVertical 2.1s linear infinite}
+  .scm-highlights{grid-template-columns:1fr}
+  .scm-realworld{grid-template-columns:1fr}
+}
+@keyframes scmMoveVertical{0%{top:-55%}100%{top:110%}}
+@media(prefers-reduced-motion:reduce){
+  .scm-promo-shield,.scm-node,.scm-arrow::after{animation:none!important}
+}
+
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 </style>
 </head>
@@ -101,13 +246,13 @@ button,.cta{border:0;border-radius:8px;padding:11px 15px;min-height:44px;font-we
 <section id="startView" class="panel">
 <div class="startgrid">
 <div>
-<h2>Your fictional company: RidgeLine Systems</h2>
-<div class="company-card"><b>RidgeLine Systems is a fictional B2B advanced-manufacturing company headquartered in the Appalachian Highlands.</b><br><br>It assembles connected monitoring units, control enclosures, and high-value replacement components used by hospitals, industrial OEMs, and commercial facilities. The business uses a hybrid make-to-stock / make-to-order model: common components are stocked, while higher-value finished configurations are assembled to customer demand. RidgeLine buys electronics globally, sources fabricated metal and plastics regionally, and operates one final-assembly plant and one distribution center in Northeast Tennessee.<br><br>You are the <b>Chief Operating Officer</b>. Procurement, planning, manufacturing, logistics, customer service, and digital transformation all report into your executive team. Your job in this simulation is to protect enterprise value—not simply minimize purchase price.</div>
+<h2>Your company: RidgeLine Systems</h2>
+<div class="company-card"><b>RidgeLine Systems is an advanced-manufacturing company headquartered in the Appalachian Highlands.</b><br><br>The company assembles connected monitoring units, control enclosures, and high-value replacement components for hospitals, industrial OEMs, and commercial facilities. Common components are stocked, while higher-value finished products are configured to customer demand. RidgeLine buys electronics globally, sources fabricated metal and plastics regionally, and operates a final-assembly plant and distribution center in Northeast Tennessee.<br><br>You are the <b>Chief Operating Officer</b>. Procurement, planning, manufacturing, logistics, customer service, and digital transformation all fall under your team. Over the next five decisions, you will have to keep customers supplied, protect margins, manage risk, and decide where to spend limited cash.</div>
 <div class="metrics"><div class="metric"><span>Annual revenue</span><b>$48M</b></div><div class="metric"><span>Quarter revenue at risk</span><b>$10M</b></div><div class="metric"><span>Suppliers</span><b>74</b></div><div class="metric"><span>Employees</span><b>185</b></div></div>
-<p class="muted">Your goal is not simply to maximize short-term profit. Strong business decisions must balance <b>profit, customer impact, resilience, innovation, and limited discretionary cash</b>. There is no fixed “best answer” in each round. Earlier choices change later outcomes, and a strategy that is optimal after one path may be poor after another. The final score also penalizes <b>imbalanced portfolios</b>—for example, excellent resilience purchased at the expense of profitability or customer service.</p>
+<p class="muted">There is more than one reasonable way to handle each problem. Keep an eye on <b>profit, customer service, resilience, innovation, and cash</b>. What you spend or sacrifice early in the game will affect the choices available to you later.</p>
 </div>
 <div>
-<div class="eventbox"><div class="eyebrow" style="color:var(--bright)">The real-world next step</div><div class="date">Friday, Oct. 16, 2026</div><div class="loc">ETSU Brinkley Center • Johnson City</div><p class="muted">The 2026 Appalachian Highlands Supply Chain and Digital Technologies Summit brings together supply chain managers and executives, business leaders, entrepreneurs, government employees, educators, industry professionals, and students.</p><b style="color:var(--blue)">8:30 AM–1:30 PM • In person</b></div>
+<div class="eventbox"><div class="eyebrow" style="color:var(--bright)">About the Summit</div><div class="date">Friday, Oct. 16, 2026</div><div class="loc">ETSU Brinkley Center • Johnson City</div><p class="muted">The 2026 Appalachian Highlands Supply Chain and Digital Technologies Summit brings together supply chain managers and executives, business leaders, entrepreneurs, government employees, educators, industry professionals, and students.</p><b style="color:var(--blue)">8:30 AM–1:30 PM • In person</b></div>
 <label>Player / team name<input id="playerName" maxlength="40" placeholder="Your name or team"></label>
 <div class="buttonrow"><button id="startBtn" class="primary">Start the challenge</button></div>
 </div>
@@ -124,56 +269,106 @@ button,.cta{border:0;border-radius:8px;padding:11px 15px;min-height:44px;font-we
 <div class="kpi"><span>Innovation</span><b id="innovationKpi">55</b></div>
 </section>
 <section id="roundPanel" class="panel"></section>
-<section class="panel"><div class="roundnum">Business dashboard</div><h2>How your strategy is performing</h2><p class="muted">Watch the tradeoffs. A decision can help one objective and hurt another.</p><div class="chartwrap"><svg id="chart" viewBox="0 0 800 235" aria-label="Business performance chart"></svg></div></section>
+<section class="panel"><div class="roundnum">Business dashboard</div><h2>Your results so far</h2><p class="muted">Every decision moves several measures at once. Watch what improves—and what you give up.</p><div class="chartwrap"><svg id="chart" viewBox="0 0 800 235" aria-label="Business performance chart"></svg></div></section>
 </main>
 
 <section id="finalView" class="panel hidden">
 <div class="finalgrid">
 <div><div class="eyebrow" style="color:var(--bright)">Challenge complete</div><div id="finalScore" class="bigscore">0</div><div id="profile" class="profile"></div><p id="finalText" class="muted"></p><div id="profileCards"></div><div class="buttonrow"><button id="replayBtn" class="secondary">Play again</button></div></div>
 <div>
-<h2>The real conversations continue at ETSU</h2>
-<p class="muted">The five decisions in the game connect directly to Summit themes: resilience and sourcing, healthcare/customer prioritization, AI adoption, Lean Six Sigma and constraint management, and critical thinking when AI supports high-consequence decisions.</p>
+<h2>See how the challenge connects to the Summit</h2>
+<p class="muted">The issues you worked through—sourcing risk, customer allocation, AI, process improvement, and judgment under uncertainty—are all part of the 2026 Summit program.</p>
 <div class="workshops">
-<div class="workshop"><b>🤖 AI in Supply Chain</b><div class="muted">How leaders can identify high-value AI use cases, prepare for adoption, and turn emerging technology into measurable business value.</div></div>
-<div class="workshop"><b>🧠 Critical Thinking in the Age of AI</b><div class="muted">How to challenge assumptions, identify missing context, and use AI to augment rather than replace human reasoning.</div></div>
-<div class="workshop"><b>⚙️ Lean Six Sigma</b><div class="muted">How to analyze processes, identify root causes, reduce waste and variation, and create sustainable performance improvement.</div></div>
+<div class="workshop">
+<b>🤖 AI in Supply Chain: Turning Emerging Technology into Business Value</b>
+<div class="muted"><strong>Leader: Jason Thorne, SVP of Global Supply Chain, Nouryon.</strong><br><br>A practical session on where AI can actually help supply chains. The workshop will cover how to choose useful applications, prepare people and processes for adoption, and measure whether the technology is creating real business value.</div>
+</div>
+<div class="workshop">
+<b>🧠 Critical Thinking in the Age of AI: An Interactive Supply Chain Workshop</b>
+<div class="muted"><strong>Leader: Dr. Chris Libutti, Professor, ETSU.</strong><br><br>A hands-on session on making better decisions when AI is part of the process. The workshop will focus on asking better questions, spotting missing context, challenging assumptions, and knowing when AI output should be trusted, tested, or challenged.</div>
+</div>
+<div class="workshop">
+<b>⚙️ Lean Six Sigma: Driving Process Improvement and Operational Excellence</b>
+<div class="muted"><strong>Leader: Mark Sebby, Solutions Consultant, UT Center for Industrial Services.</strong><br><br>A practical Lean Six Sigma session focused on finding waste, variation, bottlenecks, and root causes. The workshop will show how structured process improvement can improve quality, flow, cost, and day-to-day operating performance.</div>
+</div>
 </div>
 </div>
 </div>
 
 <div class="bio-section">
-<div class="eyebrow" style="color:var(--bright)">Current public lineup and agenda</div>
-<h2>Meet the speakers, workshop leaders, and organizer</h2>
-<p class="muted">Titles below follow the current public Summit listing/agenda where available. Bios are condensed from public professional, company, university, or industry sources.</p>
+<div class="eyebrow" style="color:var(--bright)">Summit speakers and workshop leaders</div>
+<h2>Meet the people taking part in the Summit</h2>
+<p class="muted">The 2026 Summit brings together leaders from healthcare, manufacturing, global supply chain, distribution, technology, academia, and process improvement.</p>
+
 <div class="bio-grid">
 
-<div class="bio"><h3>Ken York</h3><div class="title">Chief Supply Chain Officer • Ballad Health</div><p>The 2026 Summit lists Ken York as Ballad Health’s Chief Supply Chain Officer. York is a healthcare supply-chain leader whose recent published work emphasizes treating supply chain, quality, clinical transformation, operations, and nursing as connected contributors to patient care rather than isolated functions. His perspective brings healthcare sourcing, standardization, clinical collaboration, and operational value into the Summit.</p><a href="https://www.beckershospitalreview.com/strategy/from-silos-to-synergy-how-quality-supply-chain-and-transformation-are-upending-ballad-healths-care-strategy-playbook/" target="_blank" rel="noopener">Public bio/context source ↗</a></div>
+<div class="bio">
+<h3>Ken York</h3>
+<div class="title">Chief Supply Chain Officer • Ballad Health</div>
+<p>Ken York is a healthcare supply-chain executive at Ballad Health. His perspective connects supply chain with patient care, clinical operations, sourcing, standardization, cost management, and the coordination required to support a large regional health system.</p>
+</div>
 
-<div class="bio"><h3>Nathan Swisshelm</h3><div class="title">Vice President of Global Supply Chain • Elo Touch Systems</div><p>Nathan Swisshelm leads global supply-chain activities at Elo Touch Solutions. His public professional profile describes experience spanning strategic procurement, production, logistics, supplier development, project management, and supply-chain systems. He earned a business degree from the University of Tennessee with study in Logistics and Transportation and Marketing, giving him a broad end-to-end perspective on global supply-chain leadership.</p><a href="https://www.linkedin.com/in/nathan-swisshelm-0690448" target="_blank" rel="noopener">Professional profile source ↗</a></div>
+<div class="bio">
+<h3>Nathan Swisshelm</h3>
+<div class="title">Vice President of Global Supply Chain • Elo Touch Systems</div>
+<p>Nathan Swisshelm is a global supply-chain leader with experience in strategic procurement, production, logistics, supplier development, project management, and supply-chain systems. He brings an end-to-end perspective on sourcing, operations, technology, and international supply networks.</p>
+</div>
 
-<div class="bio"><h3>Ryan Berkley, CAFS</h3><div class="title">President &amp; Owner • B&amp;B Filters</div><p>Ryan Berkley is President and Owner of Johnson City–based B&amp;B Filters, a second-generation filtration business founded in 1992 that serves commercial, medical, and industrial customers. Berkley is a National Air Filtration Association Certified Air Filter Specialist and an ETSU graduate in Computing. His experience combines small-business leadership, industrial customers, supplier relationships, technology, and growth into new markets.</p><a href="https://bnbfilters.com/" target="_blank" rel="noopener">Company source ↗</a></div>
+<div class="bio">
+<h3>Ryan Berkley, CAFS</h3>
+<div class="title">President &amp; Owner • B&amp;B Filters</div>
+<p>Ryan Berkley is President and Owner of B&amp;B Filters, a Johnson City–based filtration business serving commercial, medical, and industrial customers. His background combines entrepreneurship, distribution, supplier management, technology, and the practical challenges of growing a regional business.</p>
+</div>
 
-<div class="bio"><h3>Jason Thorne</h3><div class="title">Senior Vice President of Global Supply Chain • Nouryon</div><p>Jason Thorne is a seasoned supply-chain and business executive with more than three decades of experience. His leadership has included integrated business planning, customer service, logistics, procurement, planning transformation, and cross-functional change at Nouryon and previously Eastman Chemical Company. He also served 27 years in the Indiana Army National Guard and retired as a Major. Thorne holds an MBA from Indiana University’s Kelley School of Business and a B.A. in Chemistry from Purdue University.</p><a href="https://www.etsu.edu/cbat/management-supply-chain/supplychainsummit25.php" target="_blank" rel="noopener">ETSU speaker bio source ↗</a></div>
+<div class="bio">
+<h3>Jason Thorne</h3>
+<div class="title">Senior Vice President of Global Supply Chain • Nouryon</div>
+<p>Jason Thorne is an experienced global supply-chain and business executive whose leadership background includes integrated business planning, customer service, logistics, procurement, planning transformation, and cross-functional change. He also leads the Summit workshop on AI in supply chain.</p>
+</div>
 
-<div class="bio"><h3>Yamila H. Libutti</h3><div class="title">Co-Founder • Breaking Barriers Consulting</div><p>Yamila Libutti is a global technology executive, board member, author, speaker, mentor, and co-founder of Breaking Barriers Consulting. Her public profile highlights leadership across technology, customer experience, transformation, change management, and leadership development. She was inducted into the HITEC Hall of Fame in 2024 and has received repeated HITEC 100 recognition for technology leadership.</p><a href="https://hitecglobal.org/hall-of-fame" target="_blank" rel="noopener">HITEC source ↗</a></div>
+<div class="bio">
+<h3>Yamila Libutti</h3>
+<div class="title">Co-Founder • Breaking Barriers Consulting</div>
+<p>Yamila Libutti is a technology and transformation leader, entrepreneur, speaker, and co-founder of Breaking Barriers Consulting. Her background includes leadership, organizational transformation, customer experience, change management, and technology adoption.</p>
+</div>
 
-<div class="bio"><h3>Jim Tornstrom</h3><div class="title">Regional Vice President • Fastenal</div><p>Jim Tornstrom is a regional leader with Fastenal based in East Tennessee/Knoxville. His public professional profile emphasizes Fastenal’s role in creating customer value through supply-chain knowledge and shows his long-standing leadership experience with the company. His Summit perspective connects distribution, industrial supply, customer relationships, inventory availability, and regional supply-chain execution.</p><a href="https://www.linkedin.com/in/jim-tornstrom-18124b12" target="_blank" rel="noopener">Professional profile source ↗</a></div>
+<div class="bio">
+<h3>Kenneth Perry</h3>
+<div class="title">Director of Materials • Becker Global</div>
+<p>Kenneth Perry is a materials and operations leader with experience in purchasing, production scheduling, logistics, inventory management, ERP systems, supplier relationships, constraint management, Kanban, production leveling, and manufacturing operations.</p>
+</div>
 
-<div class="bio"><h3>Kenneth Perry</h3><div class="title">Director of Materials • Becker Global</div><p>Kenneth Perry is an operations and supply-chain leader whose public professional résumé lists current responsibility for materials and purchasing at Becker Global–America. His background includes materials management, production scheduling, logistics, purchasing, ERP systems, constraint management, Kanban, Heijunka, inventory accuracy, and supplier partnerships across industrial and automotive settings. He also holds advanced ASCM/APICS and purchasing credentials.</p><a href="https://us.bold.pro/my/kenneth-perry-260501121659" target="_blank" rel="noopener">Public professional résumé source ↗</a></div>
+<div class="bio">
+<h3>Jim Thornstrom</h3>
+<div class="title">Regional Vice President • Fastenal</div>
+<p>Jim Thornstrom is a regional leader with Fastenal. His perspective connects industrial distribution, inventory availability, customer service, supplier relationships, and the role of supply-chain execution in supporting manufacturing and business customers.</p>
+</div>
 
-<div class="bio"><h3>Dr. Chris M. Libutti</h3><div class="title">Professor, ETSU • Critical Thinking Workshop Leader</div><p>The current 2026 event agenda lists Dr. Chris Libutti as the leader of the Critical Thinking in the Age of AI workshop. His public ETSU speaker bio highlights a multidisciplinary career spanning U.S. Army Special Operations, entrepreneurship, major project and contract leadership, organizational behavior, engineering, research, human performance, and leadership development. He is also a founder of Breaking Barriers Consulting.</p><a href="https://www.etsu.edu/cbat/management-supply-chain/supplychainsummit25.php" target="_blank" rel="noopener">ETSU speaker bio source ↗</a></div>
+<div class="bio">
+<h3>Dr. Chris Libutti</h3>
+<div class="title">Professor, ETSU • Critical Thinking Workshop Leader</div>
+<p>Dr. Chris Libutti brings experience in leadership, organizational behavior, project and program execution, entrepreneurship, human performance, and decision-making. He leads the Summit workshop on critical thinking in the age of AI.</p>
+</div>
 
-<div class="bio"><h3>Mark Sebby</h3><div class="title">Solutions Consultant • UT Center for Industrial Services</div><p>Mark Sebby brings more than 30 years of quality and Lean improvement experience, including 22 years in the automotive industry and extensive consulting across manufacturing sectors. He is a Six Sigma Black Belt with experience in DOE, value-stream mapping, Theory of Constraints, statistical analysis, Kaizen, quick changeover, cellular manufacturing, standard work, downtime reduction, and multiple ISO/IATF/AS quality systems.</p><a href="https://tmep.cis.tennessee.edu/mark-sebby-0" target="_blank" rel="noopener">UT CIS official bio ↗</a></div>
+<div class="bio">
+<h3>Mark Sebby</h3>
+<div class="title">Solutions Consultant • UT Center for Industrial Services</div>
+<p>Mark Sebby is an experienced quality and Lean improvement professional whose background includes Six Sigma, value-stream mapping, Theory of Constraints, statistical analysis, Kaizen, quick changeover, standard work, downtime reduction, and quality-management systems. He leads the Summit Lean Six Sigma workshop.</p>
+</div>
 
-<div class="bio"><h3>Matthew T. Jenkins, Ph.D.</h3><div class="title">Summit Organizer • Associate Professor of Supply Chain Management, ETSU</div><p>Matthew Jenkins is an Associate Professor of Supply Chain Management at ETSU and organizer of the Summit. His research focuses on supply-chain resource orchestration, cross-functional relationships, and supply-chain risk and disruptive events. Before academia, he worked at Oak Ridge National Laboratory/DOE, Pfizer, and Siemens Medical Solutions in database, business-intelligence, logistics, and international supply-chain roles. He teaches logistics, strategic sourcing, international distribution, operations, and supply-chain optimization.</p><a href="https://www.etsu.edu/cbat/management-supply-chain/facstaff/jenkinsm.php" target="_blank" rel="noopener">ETSU faculty bio ↗</a></div>
+<div class="bio">
+<h3>Rohan Korde, Ph.D.</h3>
+<div class="title">Assistant Professor of Supply Chain Management • East Tennessee State University</div>
+<p>Dr. Korde studies the movement of physical goods in global supply networks and the financing mechanisms among supply-chain intermediaries. He also studies coordination, competition, cooperation, and coopetition between organizations to improve supply-chain efficiency and flexibility.</p>
+</div>
 
 </div>
 </div>
 
 <div class="bio-section">
-<div class="eyebrow" style="color:var(--bright)">Why the game’s decision logic is defensible</div>
-<h2>Supply-chain practice behind the scenarios</h2>
-<p class="muted">The RidgeLine company and numerical outcomes are fictional, but the strategic logic was checked against established supply-chain, quality, and AI-management guidance.</p>
+<div class="eyebrow" style="color:var(--bright)">How the scenarios were built</div>
+<h2>Supply-chain thinking behind the scenarios</h2>
+<p class="muted">RidgeLine and its numbers were created for the challenge. The decisions themselves draw on established practices in supply-chain resilience, AI adoption, process improvement, and human oversight.</p>
 <div class="validation-sources">
 <div class="validation-source"><b>Structural resilience: dual sourcing and prequalified alternatives</b><div class="muted">McKinsey’s supply-chain resilience work identifies dual sourcing, regionalization, visibility, and inventory positioning as common structural responses to disruption.</div><a href="https://www.mckinsey.com/capabilities/operations/our-insights/supply-chain-risk-survey-2024" target="_blank" rel="noopener">McKinsey source ↗</a></div>
 <div class="validation-source"><b>AI: prioritize feasible use cases with measurable business value</b><div class="muted">Gartner’s 2025 supply-chain guidance argues that “AI for the sake of AI” does not create value and that leaders should evaluate use cases on both feasibility and business value, including data readiness.</div><a href="https://www.gartner.com/en/newsroom/press-releases/2025-05-21-gartner-supply-chain-symposium-xpo-barcelona-day-3-highlights" target="_blank" rel="noopener">Gartner source ↗</a></div>
@@ -183,15 +378,107 @@ button,.cta{border:0;border-radius:8px;padding:11px 15px;min-height:44px;font-we
 </div>
 
 <div class="ctabox">
-<div class="eyebrow">You made the decisions. Now hear from the people making them for real.</div>
+<div class="eyebrow">Take the next step</div>
 <h2>Join the 2026 Appalachian Highlands Supply Chain &amp; Digital Technologies Summit</h2>
-<p>Meet executives and industry professionals, hear real business perspectives, participate in practical workshops, build your network, and leave with ideas you can use in your organization or career.</p>
+<p>Hear from leaders in healthcare, global supply chain, manufacturing, materials management, distribution, procurement, operations, and technology. Then take part in three hands-on workshops built around AI, critical thinking, and Lean Six Sigma.</p>
+
+<div style="max-width:900px;margin:16px auto;text-align:left;display:grid;gap:10px">
+<div style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.20);border-radius:8px;padding:12px">
+<strong style="color:var(--gold)">AI in Supply Chain: Turning Emerging Technology into Business Value</strong><br>
+<span style="color:#e7edf3;font-size:13px">Jason Thorne • A practical look at useful AI applications, adoption challenges, and how to measure whether AI is actually improving supply-chain performance.</span>
+</div>
+<div style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.20);border-radius:8px;padding:12px">
+<strong style="color:var(--gold)">Critical Thinking in the Age of AI: An Interactive Supply Chain Workshop</strong><br>
+<span style="color:#e7edf3;font-size:13px">Dr. Chris Libutti • Work through how to challenge assumptions, spot missing context, and combine AI output with sound human judgment.</span>
+</div>
+<div style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.20);border-radius:8px;padding:12px">
+<strong style="color:var(--gold)">Lean Six Sigma: Driving Process Improvement and Operational Excellence</strong><br>
+<span style="color:#e7edf3;font-size:13px">Mark Sebby • Apply Lean Six Sigma to waste, variation, bottlenecks, root-cause problem solving, quality, and operating performance.</span>
+</div>
+</div>
+
+<p><strong>Summit speakers and workshop leaders:</strong><br>
+Ken York • Nathan Swisshelm • Ryan Berkley • Jason Thorne • Yamilla Libutti • Kenneth Perry • Jim Thornstrom • Dr. Chris Libutti • Mark Sebby • Rohan Korde, Ph.D.</p>
+
 <a class="cta goldbtn" href="https://www.eventbrite.com/e/2000261166996?aff=oddtdtcreator" target="_blank" rel="noopener">Register on Eventbrite →</a>
 <div class="small" style="margin-top:10px;color:#dce6ef">Friday, October 16, 2026 • 8:30 AM–1:30 PM • ETSU Brinkley Center • Johnson City, Tennessee</div>
 </div>
+
+<div class="scm-promo">
+  <div class="scm-promo-head">
+    <img class="scm-promo-shield" src="https://www.etsu.edu/_images/logos/etsu-shield.min.svg" alt="ETSU shield">
+    <div class="scm-promo-title">
+      <div class="mini">ETSU • BBA in Supply Chain Management</div>
+      <h2>Turn complex supply-chain problems into real business decisions.</h2>
+      <p>Build the analytical, leadership, strategic, and technology skills to manage supply chains across industries—from sourcing and planning to logistics, operations, analytics, and customer service.</p>
+    </div>
+  </div>
+
+  <div class="scm-flow" aria-label="Animated supply chain pathway">
+    <div class="scm-node">
+      <div class="ico">🌐</div>
+      <b>Source</b>
+      <span>Suppliers &amp; global networks</span>
+    </div>
+    <div class="scm-arrow" aria-hidden="true"></div>
+    <div class="scm-node">
+      <div class="ico">📊</div>
+      <b>Analyze</b>
+      <span>Data, technology &amp; optimization</span>
+    </div>
+    <div class="scm-arrow" aria-hidden="true"></div>
+    <div class="scm-node">
+      <div class="ico">⚙️</div>
+      <b>Operate</b>
+      <span>Planning, inventory &amp; execution</span>
+    </div>
+    <div class="scm-arrow" aria-hidden="true"></div>
+    <div class="scm-node">
+      <div class="ico">🤝</div>
+      <b>Deliver Value</b>
+      <span>Customers, leadership &amp; growth</span>
+    </div>
+  </div>
+
+  <div class="scm-highlights">
+    <div class="scm-highlight">
+      <b>Supply Chain Leadership</b>
+      <span>Learn to integrate supply and demand, lead collaboration, manage change, and solve problems across organizations.</span>
+    </div>
+    <div class="scm-highlight">
+      <b>Supply Chain Marketing</b>
+      <span>Connect demand management, product decisions, customer needs, promotion, production, and distribution.</span>
+    </div>
+    <div class="scm-highlight">
+      <b>Operations &amp; Analytics</b>
+      <span>Use analytics, visualization, ERP systems, databases, and performance tools to improve supply-chain decisions.</span>
+    </div>
+  </div>
+
+  <div class="scm-realworld">
+    <div class="scm-realworld-copy">
+      <h3>Learn it. Apply it. Take it into the real world.</h3>
+      <p>ETSU emphasizes hands-on learning through internships, study tours, consulting projects, student organizations, and competitions—giving students opportunities to connect classroom concepts with real business problems.</p>
+    </div>
+    <div class="scm-careers" aria-label="Example supply chain careers">
+      <div class="scm-career">Supply Chain Analyst</div>
+      <div class="scm-career">Demand Planner</div>
+      <div class="scm-career">Purchasing Manager</div>
+      <div class="scm-career">Operations Manager</div>
+      <div class="scm-career">Logistics Manager</div>
+      <div class="scm-career">Supply Chain Manager</div>
+    </div>
+  </div>
+
+  <div class="scm-promo-cta">
+    <a class="scm-link" href="https://www.etsu.edu/cbat/management-supply-chain/supply-chain.php" target="_blank" rel="noopener">See how ETSU prepares you for the real world →</a>
+    <span class="scm-promo-note">Explore the BBA in Supply Chain Management at East Tennessee State University.</span>
+  </div>
+</div>
+
 </section>
 
-<div class="footer">Event details based on the current Eventbrite listing • Interactive simulation uses fictional company data for promotional and educational purposes.</div>
+<div class="footer">2026 Appalachian Highlands Supply Chain and Digital Technologies Summit • ETSU Brinkley Center • Johnson City, Tennessee<br>Department of Management &amp; Supply Chain • College of Business &amp; Technology • East Tennessee State University</div>
 </div>
 
 <script>
@@ -233,7 +520,7 @@ opts:[
 {
 cat:"Round 3 • AI portfolio & digital transformation",
 title:"The CEO gives you a 90-day AI mandate",
-risk:"One pilot • cash is now path-dependent",
+risk:"One pilot • budget depends on earlier choices",
 background:"RidgeLine’s forecast error is 22%, annual expedite spending is $1.1 million, and buyers spend 2,900 hours per year manually following up on late purchase orders. Supplier data are relatively clean; forecast history is usable but customer-event drivers are inconsistently coded. Three pilots are available, and their affordability now depends on what you spent in Rounds 1–2.",
 story:"A pilot that exceeds your remaining crisis cash can still be selected, but doing so forces Finance to cut other discretionary spending and will reduce the profit metric. The objective is not to choose the most advanced technology; it is to choose the highest-value learning cycle that your organization can actually absorb.",
 data:[["Supplier-risk pilot","$285K"],["Forecasting pilot","$330K"],["Buyer copilot","$185K"],["Proof window","90 days"]],
@@ -250,7 +537,7 @@ cat:"Round 4 • Lean Six Sigma + Theory of Constraints",
 title:"Defects have doubled and the constraint is overloaded",
 risk:"OTIF 86% • overtime +31%",
 background:"Final test is the system constraint. Utilization is 94%, first-pass yield has fallen to 92.1%, and rework repeatedly consumes bottleneck time. A Lean team estimates a 60% probability of recovering most lost capacity within two weeks. A 90-day parallel tester lease costs $145,000. Permanent equipment costs $620,000 and cannot be canceled once ordered.",
-story:"This round is intentionally dependent on your earlier decisions. If customer performance is already weak, temporary capacity becomes more valuable. If cash is scarce but resilience is strong, management may prefer to tolerate short-term service risk and attack root cause without a capacity hedge.",
+story:"Your earlier decisions matter here. If customer performance is already weak, temporary capacity is worth more. If cash is tight and the business has built enough resilience elsewhere, management may choose to accept more short-term service risk and focus on the root cause.",
 data:[["Constraint utilization","94%"],["FPY","92.1%"],["90-day lease","$145K"],["Root-cause success in 2 wks","60%"]],
 lens:"Balance <b>service recovery, temporary versus permanent capacity, root-cause removal, cash remaining, and the cost of being wrong about the improvement timeline</b>.",
 validation:"DMAIC supports diagnosing and correcting root causes before permanent capital decisions, while TOC emphasizes protecting bottleneck throughput. A temporary capacity hedge can be rational when service exposure is high and improvement timing is uncertain.",
@@ -385,7 +672,7 @@ p.innerHTML+=`<div class="result">
 <div class="scoregain">Decision locked — ${cashAfter} crisis cash remaining</div>
 <h3>Business outcome</h3>
 <div>${o.explain}</div>
-${adjusted.note?`<div class="portfolio-warning"><b>Path-dependent effect:</b> ${adjusted.note}</div>`:""}
+${adjusted.note?`<div class="portfolio-warning"><b>Because of your earlier choices:</b> ${adjusted.note}</div>`:""}
 <div class="delta-grid">
 <div class="delta"><span>Profit</span><b>${Math.round(m.profit)}</b></div>
 <div class="delta"><span>Customer</span><b>${Math.round(m.customer)}</b></div>
@@ -414,7 +701,7 @@ $("finalScore").textContent=final+"/100";
 $("profile").textContent=profile;
 
 const cashText=(state.cash>=0?"$":"-$")+Math.abs(Math.round(state.cash/1000))+"K";
-$("finalText").textContent=`${name}, your final result is based on the portfolio you created—not on accumulating points for individual answers. You finished with ${cashText} of crisis cash, and the score penalizes both weak metrics and an unbalanced strategy.`;
+$("finalText").textContent=`${name}, you finished with ${cashText} of crisis cash. Your score reflects the overall condition of the business, so protecting one area while letting another fall too far will hurt the result.`;
 
 const vals=[
 ["Profit",m.profit,"Short-term economics and financial flexibility"],
@@ -427,7 +714,7 @@ const weakest=[...vals].sort((a,b)=>a[1]-b[1])[0];
 
 $("profileCards").innerHTML=
 `<div class="profile-card"><b>Strongest dimension: ${sorted[0][0]} (${Math.round(sorted[0][1])})</b><div class="muted">${sorted[0][2]}</div></div>
-<div class="profile-card"><b>Constraint on your portfolio: ${weakest[0]} (${Math.round(weakest[1])})</b><div class="muted">${weakest[2]}. The final score intentionally penalizes strategies that maximize one objective by sacrificing another.</div></div>
+<div class="profile-card"><b>Biggest vulnerability: ${weakest[0]} (${Math.round(weakest[1])})</b><div class="muted">${weakest[2]}. This was the weakest part of your final business position.</div></div>
 <div class="profile-card"><b>Cash remaining: ${cashText}</b><div class="muted">${state.cash<0?"You exceeded the $1.20M crisis reserve, which created a financing/opportunity-cost penalty.":"Unused cash preserved option value, but excessive cash preservation can also reduce service or resilience if underinvestment caused weak operating outcomes."}</div></div>`;
 
 window.scrollTo({top:0,behavior:"smooth"});
