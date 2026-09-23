@@ -1,0 +1,19 @@
+ETSU SUMMIT SUPPLY CHAIN CHALLENGE — MASTER BUILD
+Build date: 2026-09-23
+
+This build has been verified to include:
+- Natural RidgeLine Systems intro copy
+- Multi-objective / crisis-cash portfolio scoring
+- Path-dependent decision outcomes
+- 10 participant bios, including Rohan Korde, Ph.D.
+- Matthew Jenkins removed
+- No professional/presenter links in bio cards
+- AI in Supply Chain workshop
+- Critical Thinking in the Age of AI workshop
+- Lean Six Sigma workshop
+- Animated ETSU BBA in Supply Chain Management promotional card
+- Official ETSU BBA Supply Chain Management program link
+
+Open index.html from THIS folder.
+
+index.html SHA256: 5067374e61e0a2c7c5aa0cd6dc01a34d56407a0f7e74050f8dd267b89663db43
