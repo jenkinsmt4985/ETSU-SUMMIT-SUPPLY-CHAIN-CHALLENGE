@@ -44,7 +44,7 @@ button,.cta{border:0;border-radius:8px;padding:11px 15px;min-height:44px;font-we
 .roundhead{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;flex-wrap:wrap}.roundnum{font-size:11px;color:var(--bright);font-weight:900;text-transform:uppercase;letter-spacing:.1em}.roundhead h2{font-size:28px;margin:4px 0 4px}.riskpill{background:#fff0f0;border:1px solid #e7aaaa;color:#8e1d1d;border-radius:999px;padding:7px 10px;font-size:11px;font-weight:900}
 .scenario{display:grid;grid-template-columns:1.2fr .8fr;gap:12px;margin-top:12px}@media(max-width:800px){.scenario{grid-template-columns:1fr}}.story{background:#f7f9fb;border:1px solid #dce2e8;border-left:5px solid var(--blue);border-radius:8px;padding:14px;line-height:1.55}.databox{display:grid;gap:7px}.datum{background:var(--softgold);border:1px solid #ead58b;border-radius:8px;padding:10px}.datum span{display:block;text-transform:uppercase;font-size:9px;color:#75601a}.datum b{color:var(--blue);font-size:17px}
 .choices{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:13px}@media(max-width:850px){.choices{grid-template-columns:1fr}}.choice{text-align:left;background:white;border:2px solid #d9dfe5;border-radius:10px;padding:13px;color:var(--ink);min-height:150px}.choice:hover{border-color:var(--gold);background:#fffaf0}.choice:disabled{cursor:default}.choice h3{margin:0 0 6px;font-size:17px}.chips{display:flex;gap:5px;flex-wrap:wrap;margin-top:9px}.chip{font-size:9px;background:#eaf0f7;color:var(--blue);padding:4px 6px;border-radius:999px;font-weight:700}
-.result{margin-top:14px;background:#fbfcfd;border:1px solid #d2dae2;border-left:6px solid var(--gold);border-radius:8px;padding:14px}.scoregain{font-size:26px;color:var(--bright);font-weight:950}
+.result{margin-top:14px;background:#fbfcfd;border:1px solid #d2dae2;border-left:6px solid var(--gold);border-radius:8px;padding:14px}.scoregain{font-size:19px;color:var(--blue);font-weight:900}
 .delta-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-top:10px}@media(max-width:650px){.delta-grid{grid-template-columns:repeat(2,1fr)}}.delta{background:#f3f6f9;border-radius:7px;padding:8px;text-align:center}.delta span{display:block;font-size:9px;color:var(--muted);text-transform:uppercase}.delta b{color:var(--blue)}
 .summit-connect{margin-top:12px;background:var(--softblue);border:1px solid #ccdaea;border-radius:8px;padding:12px}.summit-connect b{color:var(--bright)}
 .chartwrap{overflow:auto}svg{width:100%;min-width:650px;height:235px;border:1px solid #e2e7ec;border-radius:8px;background:white}
@@ -76,6 +76,16 @@ button,.cta{border:0;border-radius:8px;padding:11px 15px;min-height:44px;font-we
 .validation-source b{display:block;color:var(--blue);margin-bottom:4px}
 .validation-source a{font-size:11px;color:var(--bright);font-weight:700}
 
+
+.tradeoff-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:10px}
+@media(max-width:650px){.tradeoff-grid{grid-template-columns:repeat(2,1fr)}}
+.tradeoff{border-radius:7px;padding:7px 8px;background:#f5f7fa;border:1px solid #e0e5ea}
+.tradeoff span{display:block;font-size:9px;text-transform:uppercase;color:var(--muted)}
+.tradeoff b{font-size:12px;color:var(--blue)}
+.portfolio-warning{margin-top:10px;padding:10px;border-radius:8px;background:#fff8df;border:1px solid #ead78f;font-size:11px;line-height:1.45;color:#64531b}
+.cash-negative{color:#b42318!important}
+.cash-positive{color:#157347!important}
+
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 </style>
 </head>
@@ -94,7 +104,7 @@ button,.cta{border:0;border-radius:8px;padding:11px 15px;min-height:44px;font-we
 <h2>Your fictional company: RidgeLine Systems</h2>
 <div class="company-card"><b>RidgeLine Systems is a fictional B2B advanced-manufacturing company headquartered in the Appalachian Highlands.</b><br><br>It assembles connected monitoring units, control enclosures, and high-value replacement components used by hospitals, industrial OEMs, and commercial facilities. The business uses a hybrid make-to-stock / make-to-order model: common components are stocked, while higher-value finished configurations are assembled to customer demand. RidgeLine buys electronics globally, sources fabricated metal and plastics regionally, and operates one final-assembly plant and one distribution center in Northeast Tennessee.<br><br>You are the <b>Chief Operating Officer</b>. Procurement, planning, manufacturing, logistics, customer service, and digital transformation all report into your executive team. Your job in this simulation is to protect enterprise value—not simply minimize purchase price.</div>
 <div class="metrics"><div class="metric"><span>Annual revenue</span><b>$48M</b></div><div class="metric"><span>Quarter revenue at risk</span><b>$10M</b></div><div class="metric"><span>Suppliers</span><b>74</b></div><div class="metric"><span>Employees</span><b>185</b></div></div>
-<p class="muted">Your goal is not simply to maximize short-term profit. Strong business decisions must balance <b>profit, customer impact, resilience, and innovation</b>. In this version, every option is intentionally defensible; the highest-scoring answer is the best <i>portfolio</i> choice under the stated assumptions, not an obvious “right answer.”</p>
+<p class="muted">Your goal is not simply to maximize short-term profit. Strong business decisions must balance <b>profit, customer impact, resilience, innovation, and limited discretionary cash</b>. There is no fixed “best answer” in each round. Earlier choices change later outcomes, and a strategy that is optimal after one path may be poor after another. The final score also penalizes <b>imbalanced portfolios</b>—for example, excellent resilience purchased at the expense of profitability or customer service.</p>
 </div>
 <div>
 <div class="eventbox"><div class="eyebrow" style="color:var(--bright)">The real-world next step</div><div class="date">Friday, Oct. 16, 2026</div><div class="loc">ETSU Brinkley Center • Johnson City</div><p class="muted">The 2026 Appalachian Highlands Supply Chain and Digital Technologies Summit brings together supply chain managers and executives, business leaders, entrepreneurs, government employees, educators, industry professionals, and students.</p><b style="color:var(--blue)">8:30 AM–1:30 PM • In person</b></div>
@@ -107,7 +117,7 @@ button,.cta{border:0;border-radius:8px;padding:11px 15px;min-height:44px;font-we
 <main id="gameView" class="hidden">
 <section class="hud">
 <div class="kpi"><span>Round</span><b id="roundKpi">1 / 5</b><div class="progress"><div id="progress"></div></div></div>
-<div class="kpi"><span>Total score</span><b id="scoreKpi">0</b></div>
+<div class="kpi"><span>Discretionary cash</span><b id="scoreKpi">$1.20M</b></div>
 <div class="kpi"><span>Profit</span><b id="profitKpi">70</b></div>
 <div class="kpi"><span>Customer</span><b id="customerKpi">70</b></div>
 <div class="kpi"><span>Resilience</span><b id="resilienceKpi">60</b></div>
@@ -188,87 +198,104 @@ button,.cta{border:0;border-radius:8px;padding:11px 15px;min-height:44px;font-we
 (()=>{
 "use strict";
 const $=id=>document.getElementById(id),clamp=x=>Math.max(0,Math.min(100,x));
-let round=0,score=0,name="",m=null,history=[];
+let round=0,score=0,name="",m=null,history=[],state=null;
 const rounds=[
 {
 cat:"Round 1 • Strategic sourcing & resilience",
 title:"Your sole-source supplier just went offline",
 risk:"TTS = 18 days • TTR ≈ 42 days",
-background:"RidgeLine’s highest-revenue product family uses a custom control board from one overseas supplier. The supplier has confirmed a six-week production outage. On-hand and in-transit inventory provide 18 days of coverage. A technically qualified secondary supplier can begin shipping in 21 days, but its price is 14% higher and its first-month capacity is limited to 65% of RidgeLine’s normal requirement. An authorized broker can supply 12 days of material immediately at a 32% premium, subject to additional incoming inspection.",
-story:"The immediate problem is a 24-day continuity gap, but the decision also changes RidgeLine’s longer-term sourcing economics. Procurement, quality, finance, and operations have three credible response plans. None fully eliminates the risk.",
-data:[["Time-to-survive","18 days"],["Estimated recovery","42 days"],["Backup first shipment","21 days"],["Backup month-1 capacity","65%"]],
-lens:"Compare the plans using <b>continuity, total landed cost, qualification/quality exposure, supplier concentration, and how much premium action is temporary versus structural</b>.",
-validation:"Dual sourcing and prequalified alternatives reduce structural concentration risk, while premium freight or spot inventory can serve as a bridge. The tradeoff is how much resilience to buy, how quickly, and at what cost.",
+background:"RidgeLine’s highest-revenue product family uses a custom control board from one overseas supplier. The supplier has confirmed a six-week production outage. On-hand and in-transit inventory provide 18 days of coverage. A technically qualified secondary supplier can begin shipping in 21 days, but its price is 14% higher and its first-month capacity is limited to 65% of normal demand. An authorized broker can supply 12 days of material immediately at a 32% premium, subject to enhanced incoming inspection.",
+story:"The decision is not whether resilience is good—it is how much resilience to buy, how quickly, and what you are willing to give up. Finance has given you only <b>$1.20 million of discretionary crisis cash</b> for all five rounds, so an expensive sourcing response reduces what you can invest later in AI, capacity, or customer recovery.",
+data:[["Time-to-survive","18 days"],["Estimated recovery","42 days"],["Backup first shipment","21 days"],["Crisis cash","$1.20M"]],
+lens:"Compare <b>continuity, recurring purchase-price variance, quality/traceability exposure, concentration risk, and cash consumed now versus flexibility retained for later decisions</b>.",
+validation:"Dual sourcing and bridge inventory can reduce disruption exposure, but resilience has carrying, qualification, and switching costs. The economically preferred response depends on the value of protected demand and on what other risks compete for the same capital.",
 connect:"This decision connects to Summit perspectives on strategic sourcing, supplier relationships, materials management, global supply chains, distribution, and risk.",
 opts:[
-{name:"Plan A — 50/50 dual-source conversion",desc:"Award 50% of future volume to the qualified secondary source and retain 50% with the incumbent. Buy six days of broker inventory to cover part of the transition and prioritize constrained boards to the highest-contribution products.",trade:"Backup premium +14%; broker premium +32% on six days; diversification begins immediately; some exposure remains if the incumbent misses the 42-day recovery estimate.",chips:["50/50 award","6-day bridge","SKU prioritization"],gain:119,d:{profit:-5,customer:15,resilience:21,innovation:5},explain:"This is a strong balanced response. It reduces concentration and covers most of the near-term gap without paying to move the entire portfolio. Its weakness is that half of future volume remains exposed to the incumbent’s recovery path."},
-{name:"Plan B — 65% contingency award + narrow bridge",desc:"Use the secondary supplier at its full 65% month-one capacity, keep 35% with the incumbent, and purchase only enough broker material to bridge the highest-risk customer commitments until the secondary source arrives.",trade:"Higher recurring purchase-price variance than Plan A; smaller broker purchase; fastest structural reduction in dependency; supplier transition workload is highest.",chips:["65/35 award","Selective bridge","Faster diversification"],gain:126,d:{profit:-9,customer:18,resilience:25,innovation:6},explain:"This produces the best expected enterprise balance under the stated assumptions, but only narrowly. It buys more resilience than Plan A at a higher recurring unit cost and greater transition workload."},
-{name:"Plan C — 12-day broker bridge + incumbent recovery",desc:"Buy the full 12 days available from the authorized broker, add enhanced receiving inspection, preserve the incumbent as the primary source, and defer the secondary-source award until actual recovery timing is clearer.",trade:"Largest short-term premium spend; preserves incumbent economics if recovery occurs on schedule; avoids immediate supplier-transfer effort; concentration risk remains.",chips:["12-day bridge","Enhanced inspection","Incumbent retained"],gain:113,d:{profit:-13,customer:17,resilience:11,innovation:3},explain:"This is a defensible containment strategy when management has high confidence in the incumbent’s recovery. It protects near-term service better than simply waiting, but it pays a steep premium without materially redesigning the network."}
+{name:"Plan A — 50/50 dual-source + modest broker bridge",desc:"Award 50% of future volume to the qualified secondary source. Purchase six days of broker inventory and use it only on the highest-contribution SKUs.",trade:"Moderate recurring cost increase and moderate cash use. Reduces concentration without consuming most of the crisis reserve.",cash:240000,d:{profit:-5,customer:11,resilience:18,innovation:0},chips:["$240K cash","50/50 award","6-day bridge"],explain:"This preserves more financial flexibility than the larger contingency award while materially reducing single-source exposure. Service protection is good but not complete if the incumbent slips beyond six weeks."},
+{name:"Plan B — Maximize near-term continuity",desc:"Use the secondary supplier at its full 65% month-one capacity and purchase the full 12 days of broker inventory. Reserve incumbent inventory for contract-critical SKUs.",trade:"Strongest near-term continuity and diversification, but it consumes a large share of crisis cash and creates the highest purchase-cost penalty.",cash:520000,d:{profit:-13,customer:20,resilience:27,innovation:-2},chips:["$520K cash","65/35 award","12-day bridge"],explain:"This substantially reduces shutdown risk, but you pay for that protection twice: through broker premiums now and higher recurring purchase cost later. The lost cash can become important in subsequent rounds."},
+{name:"Plan C — Preserve cash, use a tactical bridge",desc:"Buy eight days of broker inventory with enhanced inspection, keep the incumbent as primary source, and delay the secondary-source award until week three when recovery evidence is clearer.",trade:"Lowest structural commitment and better cash preservation, but concentration risk remains and a late incumbent recovery could still create a service gap.",cash:170000,d:{profit:-3,customer:9,resilience:6,innovation:1},chips:["$170K cash","8-day bridge","Decision deferred"],explain:"This is a real option strategy: spend enough to buy information and time, but delay the structural award. It performs well if recovery is on schedule and poorly if the outage extends."}
 ]},
 {
 cat:"Round 2 • S&OP exception management / allocation",
 title:"A healthcare customer suddenly triples its demand",
 risk:"7,000 units available vs. 8,800 requested",
-background:"RidgeLine has 5,500 units physically available and can create 1,500 additional units through controlled overtime and premium transportation. Three customers are competing for the resulting 7,000 units. The hospital system requests 4,000 units; a contracted industrial customer requests 2,800 units and carries a $38 per-unit late-delivery penalty after its grace period; a flexible commercial customer requests 2,000 units and has agreed in the past to split deliveries. Gross contribution per unit is $46, $61, and $54 respectively.",
-story:"All three customers matter. The hospital request has the highest consequence of shortage, the contracted customer has the clearest financial penalty, and the commercial customer still contributes meaningful margin. Sales has confirmed that any customer receiving at least 60% of its order is likely to accept a documented recovery plan without escalating the account.",
-data:[["Hospital","4,000 @ $46 CM"],["Contract customer","2,800 @ $61 CM"],["Commercial","2,000 @ $54 CM"],["Total available w/ expedite","7,000"]],
-lens:"Consider <b>criticality, contribution margin, contractual penalties, minimum acceptable service, and the value of preserving future customer relationships</b>. The allocation is constrained enough that one customer cannot be made completely whole without affecting the others.",
-validation:"Constrained-supply allocation is typically multi-criteria. Customer segmentation, contractual exposure, contribution, strategic importance, and the ability to re-promise demand can all affect the enterprise value of the next available unit.",
+background:"RidgeLine has 5,500 units available and can create another 1,500 through overtime and premium transportation—but only if you spend $165,000 of remaining crisis cash. The hospital system requests 4,000 units; a contracted industrial customer requests 2,800 units and carries a $38-per-unit late-delivery penalty; a flexible commercial customer requests 2,000 units. Gross contribution per unit is $46, $61, and $54 respectively.",
+story:"You must decide both <b>whether to buy the additional 1,500 units</b> and how to allocate scarce supply. If your Round 1 response already consumed substantial cash, buying all of the expedited capacity now may leave too little flexibility for later operational or digital investments.",
+data:[["Base available","5,500 units"],["Expedite option","+1,500 for $165K"],["Hospital demand","4,000 units"],["Contract penalty","$38/unit late"]],
+lens:"Balance <b>criticality, contractual penalties, contribution margin, minimum service levels, cash capacity, and the option value of retaining funds for future shocks</b>.",
+validation:"Constrained-supply allocation is a multi-criteria problem. The highest-value allocation changes when scarce cash, contractual penalties, customer criticality, and future option value are considered together.",
 connect:"This decision connects to healthcare supply-chain leadership, customer service, planning, materials management, and executive tradeoffs represented at the Summit.",
 opts:[
-{name:"Plan A — Protect the hospital and contractual account",desc:"Allocate 4,000 units to the hospital, 2,800 to the contracted industrial customer, and 200 units to the flexible commercial customer.",trade:"Fully covers the two highest-consequence obligations, but the commercial customer receives only 10% of its request and is likely to escalate or source elsewhere.",chips:["4,000 / 2,800 / 200","Two accounts full","One severe shortfall"],gain:116,d:{profit:-5,customer:15,resilience:8,innovation:4},explain:"The plan strongly protects clinical and contractual exposure, but concentrates nearly the entire shortage on one customer. That is operationally simple and defensible, yet commercially costly."},
-{name:"Plan B — Minimum-service floor + criticality weighting",desc:"Allocate 3,600 units to the hospital, 2,200 to the contracted customer, and 1,200 to the commercial customer. Use the recovery plan to prioritize the hospital’s remaining 400 units and the contracted customer’s remaining 600 units first.",trade:"Every customer receives at least 60% immediately; hospital is 90% filled; some contractual penalty exposure remains; no account receives its full request.",chips:["3,600 / 2,200 / 1,200","60%+ floor","Balanced backlog"],gain:124,d:{profit:-3,customer:20,resilience:11,innovation:6},explain:"This produces the best expected portfolio balance under the assumptions. It avoids catastrophic service to any one account while still weighting the hospital above the other customers. The tradeoff is accepting some contractual penalty rather than maximizing immediate contractual compliance."},
-{name:"Plan C — Economic allocation with a service floor",desc:"Give each customer at least 60% of its order, then allocate the remaining units to the highest incremental economic exposure: contractual penalties first, then contribution margin. Final allocation is 2,800 hospital, 2,800 contracted, and 1,400 commercial.",trade:"Protects contractual economics and keeps all customers above the 60% escalation threshold, but the hospital receives the smallest percentage of its requested critical demand.",chips:["2,800 / 2,800 / 1,400","Penalty-aware","60%+ floor"],gain:120,d:{profit:5,customer:12,resilience:9,innovation:5},explain:"This is financially disciplined and far better than a pure margin rule. It scores only slightly below Plan B because it gives up some service on the highest-consequence demand in exchange for better short-term economics."}
+{name:"Plan A — Buy all expedite capacity and protect critical/contractual demand",desc:"Spend $165K to create all 1,500 extra units. Allocate 4,000 to the hospital, 2,600 to the contract customer, and 400 to the flexible commercial account.",trade:"Highest service to the two most consequential accounts; largest cash use; commercial account experiences a severe shortfall.",cash:165000,d:{profit:-6,customer:17,resilience:5,innovation:-1},chips:["$165K cash","7,000 units","Criticality weighted"],explain:"This is attractive when service failure is more costly than preserving financial flexibility. It is less attractive if Round 1 already consumed a large share of the crisis reserve."},
+{name:"Plan B — Buy only half the expedite capacity and spread the shortage",desc:"Spend $85K for roughly 750 incremental units. Allocate 3,300 to the hospital, 1,900 to the contract customer, and 1,050 to the commercial account.",trade:"Every account receives meaningful supply and cash burn is lower, but the contract customer incurs penalties and the hospital remains short.",cash:85000,d:{profit:0,customer:12,resilience:9,innovation:1},chips:["$85K cash","6,250 units","Balanced shortfall"],explain:"This keeps more financial optionality and avoids catastrophic service to any one account. It accepts measurable penalty and service costs in exchange for retaining cash."},
+{name:"Plan C — No expedite; allocate by economic + criticality score",desc:"Use only the existing 5,500 units. Allocate 2,700 to the hospital, 1,800 to the contract customer, and 1,000 to the commercial account, then formally re-promise all remaining demand.",trade:"Preserves all crisis cash and avoids overtime/expedite cost, but service shortfalls are larger across the portfolio.",cash:0,d:{profit:7,customer:-3,resilience:7,innovation:2},chips:["$0 cash","5,500 units","Re-promise backlog"],explain:"This is financially disciplined and can be rational if cash has become the dominant constraint. It protects future investment capacity at the cost of current customer performance."}
 ]},
 {
 cat:"Round 3 • AI portfolio & digital transformation",
-title:"The CEO gives you $350,000 for an AI initiative",
-risk:"90-day proof of value",
-background:"RidgeLine’s forecast error is 22%, annual expedite spending is $1.1 million, and buyers spend roughly 2,900 hours per year manually following up on late purchase orders. IT confirms three years of PO/receipt/supplier data, four years of demand history, and a Microsoft 365 environment. Demand history is usable but promotional and customer-event drivers are inconsistently coded. Supplier data are cleaner, but late-order reason codes are incomplete.",
-story:"The board will fund one 90-day pilot and wants evidence that can justify a second-stage investment. Each candidate has real value and real implementation friction. You must choose which learning cycle is most valuable now.",
-data:[["Budget","$350K"],["Forecast error","22%"],["Expedite spend","$1.1M/year"],["Buyer follow-up","2,900 hrs/year"]],
-lens:"Evaluate <b>economic value, data readiness, process ownership, decision frequency, adoption burden, time-to-value, and whether the pilot can produce a credible baseline comparison in 90 days</b>.",
-validation:"Use-case selection should combine expected value with feasibility and data/process readiness. A technically attractive idea can still be the wrong first pilot if the operating workflow and measurement plan are weak.",
+title:"The CEO gives you a 90-day AI mandate",
+risk:"One pilot • cash is now path-dependent",
+background:"RidgeLine’s forecast error is 22%, annual expedite spending is $1.1 million, and buyers spend 2,900 hours per year manually following up on late purchase orders. Supplier data are relatively clean; forecast history is usable but customer-event drivers are inconsistently coded. Three pilots are available, and their affordability now depends on what you spent in Rounds 1–2.",
+story:"A pilot that exceeds your remaining crisis cash can still be selected, but doing so forces Finance to cut other discretionary spending and will reduce the profit metric. The objective is not to choose the most advanced technology; it is to choose the highest-value learning cycle that your organization can actually absorb.",
+data:[["Supplier-risk pilot","$285K"],["Forecasting pilot","$330K"],["Buyer copilot","$185K"],["Proof window","90 days"]],
+lens:"Evaluate <b>economic value, data readiness, workflow fit, adoption burden, implementation cash, and what capability you need for the remaining rounds</b>.",
+validation:"AI use-case selection should combine expected business value and feasibility. Data readiness, process ownership, adoption, and decision rights matter as much as model sophistication.",
 connect:"This decision maps directly to the Summit’s AI in Supply Chain workshop led by Jason Thorne, focused on practical adoption and measurable business value.",
 opts:[
-{name:"Pilot A — Supplier exception prediction",desc:"Predict which open POs are at risk of missing need dates and route high-risk exceptions to buyers. Measure expedite avoidance, shortage incidents, precision/recall, and buyer response time.",trade:"Estimated cost $285K; supplier data are relatively mature; incomplete reason codes will require cleanup; value depends on buyers acting consistently on alerts.",chips:["$285K","PO-risk alerts","Buyer workflow"],gain:127,d:{profit:12,customer:9,resilience:16,innovation:17},explain:"This is the best first pilot under the stated data conditions, but not by a large margin. The workflow is frequent, measurable, and tied directly to $1.1M of expedite spending, while the data gap is manageable."},
-{name:"Pilot B — Probabilistic demand forecasting",desc:"Build SKU/customer-level probabilistic forecasts and use them in the monthly planning cycle. Measure forecast value-add, bias, service impact, and inventory implications.",trade:"Estimated cost $330K; potential enterprise value is high; promotional/customer-event drivers need significant data preparation; results depend on planner and commercial adoption.",chips:["$330K","Forecast distributions","S&OP integration"],gain:122,d:{profit:10,customer:11,resilience:12,innovation:19},explain:"This is nearly as attractive as Pilot A and could create greater long-run value. It scores slightly lower for a 90-day first pilot because data preparation and cross-functional adoption make it harder to generate clean proof quickly."},
-{name:"Pilot C — Buyer copilot for supplier follow-up",desc:"Use a generative AI assistant to summarize PO exceptions, draft supplier communications, and prepare daily buyer action lists. Keep humans responsible for all external messages and decisions.",trade:"Estimated cost $185K; fastest deployment and lowest budget use; productivity benefit is easier to realize than direct service or inventory benefit; ROI depends on time actually redeployed.",chips:["$185K","Generative copilot","Productivity"],gain:117,d:{profit:8,customer:6,resilience:8,innovation:20},explain:"This is a credible low-risk entry point with fast adoption potential. Its strategic limitation is that saved administrative time does not automatically translate into lower shortages or expedite spend unless the process is redesigned around the freed capacity."}
+{name:"Pilot A — Supplier exception prediction",desc:"Predict open POs at risk of missing need dates and route high-risk exceptions to buyers. Measure expedite avoidance, shortage incidents, alert accuracy, and buyer response time.",trade:"Strong operational fit and relatively clean data. It improves visibility and resilience, but consumes more cash than the copilot and requires disciplined buyer response.",cash:285000,d:{profit:5,customer:6,resilience:14,innovation:16},chips:["$285K cash","PO-risk alerts","Exception workflow"],explain:"This pilot creates measurable operational value quickly. Its payoff is greatest if RidgeLine still has enough cash and management attention to redesign buyer exception work."},
+{name:"Pilot B — Probabilistic demand forecasting",desc:"Build SKU/customer-level probabilistic forecasts and integrate them into the monthly planning cycle. Measure forecast value-add, bias, service impact, and inventory implications.",trade:"Highest implementation cost and heavier cross-functional adoption, but potentially the broadest long-run effect on inventory and planning quality.",cash:330000,d:{profit:2,customer:10,resilience:10,innovation:20},chips:["$330K cash","Probabilistic forecast","S&OP integration"],explain:"This creates strategic planning capability, but the 90-day proof is harder because the data and adoption burden are greater. It becomes more attractive when customer-service performance is weak and adequate cash remains."},
+{name:"Pilot C — Buyer copilot",desc:"Use generative AI to summarize PO exceptions, draft supplier communications, and prepare daily buyer action lists. Buyers retain all external decision rights.",trade:"Lowest cash use and fastest deployment. Productivity gains are credible, but resilience and service improvements are indirect unless management deliberately redeploys saved buyer time.",cash:185000,d:{profit:9,customer:3,resilience:6,innovation:15},chips:["$185K cash","Generative copilot","Fast deployment"],explain:"This is often the best option when cash is tight or change capacity is limited. It preserves funds for later shocks, but its supply-chain impact is less direct than the predictive pilots."}
 ]},
 {
 cat:"Round 4 • Lean Six Sigma + Theory of Constraints",
 title:"Defects have doubled and the constraint is overloaded",
 risk:"OTIF 86% • overtime +31%",
-background:"Final test is the current system constraint. Utilization is 94%, first-pass yield fell from 97.2% to 92.1%, and unplanned downtime increased. Rework repeatedly returns to the same constrained test cell. A Lean team believes the dominant defect family may be correctable within two weeks, but that estimate is not yet proven. A local equipment partner can lease a parallel tester for 90 days at $145,000 and install it in one week.",
-story:"You must protect near-term customer commitments while deciding how much to invest before the root cause is fully known. The plant has enough cash for either temporary capacity plus a small improvement team, or a larger permanent capital purchase—but not both this quarter.",
-data:[["Constraint utilization","94%"],["First-pass yield","92.1%"],["90-day tester lease","$145K"],["Permanent tester","$620K"]],
-lens:"Compare <b>containment, root-cause removal, temporary capacity, capital commitment, throughput at the constraint, and the risk that improvement work takes longer than expected</b>.",
-validation:"DMAIC supports diagnosis before permanent countermeasures, while constraint management recognizes that lost minutes at a bottleneck directly limit system throughput. Temporary capacity can be rational when service risk is immediate and diagnosis is still underway.",
+background:"Final test is the system constraint. Utilization is 94%, first-pass yield has fallen to 92.1%, and rework repeatedly consumes bottleneck time. A Lean team estimates a 60% probability of recovering most lost capacity within two weeks. A 90-day parallel tester lease costs $145,000. Permanent equipment costs $620,000 and cannot be canceled once ordered.",
+story:"This round is intentionally dependent on your earlier decisions. If customer performance is already weak, temporary capacity becomes more valuable. If cash is scarce but resilience is strong, management may prefer to tolerate short-term service risk and attack root cause without a capacity hedge.",
+data:[["Constraint utilization","94%"],["FPY","92.1%"],["90-day lease","$145K"],["Root-cause success in 2 wks","60%"]],
+lens:"Balance <b>service recovery, temporary versus permanent capacity, root-cause removal, cash remaining, and the cost of being wrong about the improvement timeline</b>.",
+validation:"DMAIC supports diagnosing and correcting root causes before permanent capital decisions, while TOC emphasizes protecting bottleneck throughput. A temporary capacity hedge can be rational when service exposure is high and improvement timing is uncertain.",
 connect:"This decision connects directly to Mark Sebby’s Lean Six Sigma workshop and to broader Summit conversations on manufacturing, materials, quality, and operational excellence.",
 opts:[
-{name:"Plan A — Improvement-only recovery",desc:"Run a two-week DMAIC/TOC sprint, protect the constraint with a controlled buffer, eliminate the dominant defect/downtime causes, and use scheduled overtime during the improvement window. Do not lease additional capacity.",trade:"Lowest external spend; highest reliance on the improvement team meeting its two-week recovery estimate; overtime continues during the diagnostic period.",chips:["DMAIC/TOC","No lease","2-week target"],gain:121,d:{profit:10,customer:13,resilience:12,innovation:9},explain:"This is a strong choice if management trusts the two-week improvement estimate. It avoids capacity spend and attacks the root cause, but customer performance is exposed if the improvement takes longer."},
-{name:"Plan B — 90-day capacity hedge + focused root-cause work",desc:"Lease the parallel tester for 90 days, use it to protect customer commitments, and simultaneously run a tightly scoped DMAIC project on the original constraint. Reassess permanent capacity only after stable post-improvement throughput is measured.",trade:"Costs $145K but creates a service hedge; improvement is still required; temporary capacity prevents management from having to decide on $620K of CapEx before the process stabilizes.",chips:["90-day lease","DMAIC","Deferred CapEx decision"],gain:128,d:{profit:5,customer:18,resilience:16,innovation:10},explain:"This produces the strongest expected balance when near-term service risk is material and root-cause timing is uncertain. The lease is not the cheapest answer, but it buys decision time while the team determines the plant’s true post-improvement capacity."},
-{name:"Plan C — Permanent parallel capacity now",desc:"Purchase the $620K tester immediately, install it on an expedited schedule, and run a smaller quality project after the new equipment is commissioned.",trade:"Highest capital commitment; provides durable nominal capacity; risks buying capacity before the amount of recoverable capacity loss from defects and downtime is known.",chips:["$620K CapEx","Permanent capacity","Quality work later"],gain:115,d:{profit:-13,customer:17,resilience:15,innovation:11},explain:"This can be the right choice if demand growth already justifies permanent capacity. Under the current facts, however, the company has not yet separated true demand-driven capacity need from capacity lost to instability, so the capital decision is premature."}
+{name:"Plan A — Root-cause only, no capacity hedge",desc:"Run an intensive DMAIC/TOC sprint, buffer the constraint, restrict nonessential product changes, and use existing overtime only. Do not lease or buy equipment.",trade:"Preserves cash and avoids capacity spend; if improvement takes longer than two weeks, customer performance can deteriorate quickly.",cash:45000,d:{profit:10,customer:4,resilience:8,innovation:7},chips:["$45K project","DMAIC/TOC","No new capacity"],explain:"This has the best economics if the improvement team succeeds quickly. It is risky when the customer metric is already low because the plant has little short-term protection."},
+{name:"Plan B — 90-day tester lease + DMAIC",desc:"Lease temporary capacity and simultaneously run the root-cause project. Reassess permanent capacity only after stable throughput is measured.",trade:"Consumes $145K but reduces exposure to an improvement delay. It can be wasteful if the root cause is fixed quickly and customer service was already strong.",cash:145000,d:{profit:3,customer:14,resilience:13,innovation:8},chips:["$145K lease","DMAIC","Service hedge"],explain:"This buys option value and protects customers while diagnosis proceeds. Its attractiveness rises as customer-service risk rises and falls when cash is the dominant constraint."},
+{name:"Plan C — Permanent tester purchase",desc:"Commit $620K to additional test capacity now and run a smaller process-improvement project after commissioning.",trade:"Creates durable capacity and strong service protection, but uses most or all remaining cash and may lock in excess capacity if quality recovery restores effective throughput.",cash:620000,d:{profit:-14,customer:19,resilience:17,innovation:10},chips:["$620K CapEx","Permanent capacity","High commitment"],explain:"This becomes rational only if RidgeLine can afford it and management believes demand growth—not merely current instability—will keep the extra capacity productive after the crisis."}
 ]},
 {
 cat:"Round 5 • AI governance & critical thinking",
-title:"AI says re-source 80% of volume. Your team says the model is incomplete.",
-risk:"8% modeled savings vs. unmodeled launch risk",
-background:"Supplier B scores better on price, historical on-time delivery, lead-time variability, and financial risk. The model reports a 91% confidence score and estimates an 8% annual purchase-cost reduction. Engineering and quality identify an upcoming tooling transfer, one recent quality escape, and limited supplier engineering bandwidth that are not represented in the model. Supplier B can support a controlled pilot lot next month; the annual award does not have to be all-or-nothing today.",
-story:"The sourcing team must decide how to use the AI recommendation without losing the value of either quantitative evidence or domain expertise. The CFO wants the savings captured quickly; Operations wants a decision that does not put the upcoming product launch at risk.",
-data:[["Modeled savings","8%"],["Model confidence","91%"],["Pilot lot available","Next month"],["Tooling/quality variables","Not modeled"]],
-lens:"Consider <b>model limitations, supplier qualification, option value, phased awards, pilot evidence, cross-functional decision rights, and the cost of delaying savings</b>.",
-validation:"Human oversight is most useful when it changes the decision process—not when people merely approve or reject an algorithm. Phased commitments and additional evidence can preserve upside while limiting exposure to variables outside the model.",
+title:"AI recommends moving 80% of volume to Supplier B",
+risk:"8% modeled savings • launch risk is partly unmodeled",
+background:"Supplier B scores better on price, historical on-time delivery, lead-time variability, and financial risk. The model reports 91% confidence and estimates 8% annual purchase-cost savings. Engineering and quality identify an upcoming tooling transfer, one recent quality escape, and limited engineering-support capacity that are not represented in the model. Supplier B can support a controlled pilot lot next month.",
+story:"Your earlier AI choice now matters. If you funded supplier-risk prediction in Round 3, RidgeLine has better monitoring capability for a phased award. If you chose forecasting or the buyer copilot, the sourcing team has less new supplier-risk instrumentation and must rely more heavily on qualification gates and manual review.",
+data:[["Modeled savings","8%"],["Model confidence","91%"],["Pilot lot","Available next month"],["Key missing factors","3"]],
+lens:"Balance <b>savings capture, reversibility, supplier qualification, human oversight, monitoring capability, launch risk, and the value of learning before committing volume</b>.",
+validation:"Human oversight is strongest when it changes the structure of the decision. Phased commitments, explicit performance gates, and new evidence can preserve upside while limiting exposure to model blind spots.",
 connect:"This decision connects directly to the Summit workshop on Critical Thinking in the Age of AI led by Dr. Chris Libutti, as well as leadership and digital-transformation themes across the event.",
 opts:[
-{name:"Plan A — 80% award with enhanced controls",desc:"Accept the model’s 80% recommendation now, but require supplier engineering reviews, heightened incoming inspection, weekly launch-readiness reviews, and an executive rollback trigger if quality or tooling milestones are missed.",trade:"Captures savings fastest and adds governance around the award; however, most volume moves before the missing variables are observed in production.",chips:["80% award","Control gates","Fast savings"],gain:119,d:{profit:12,customer:8,resilience:8,innovation:15},explain:"This is much more responsible than blindly following the model. The weakness is option value: RidgeLine commits most of the volume before it has direct evidence on the unmodeled launch and engineering risks."},
-{name:"Plan B — Phased 50% award with performance gates",desc:"Shift 50% of volume to Supplier B, run the pilot lot and tooling transfer, define explicit quality/engineering/on-time gates, and increase the award toward 80% only if the supplier passes those gates. Feed the new evidence back into the sourcing model.",trade:"Captures only part of the savings immediately; preserves dual-source optionality; generates new evidence on exactly the variables the model is missing.",chips:["50% phase 1","Performance gates","Model feedback loop"],gain:130,d:{profit:10,customer:15,resilience:19,innovation:20},explain:"This yields the best expected balance under the scenario. It does not reject the model or delay all savings; instead it converts uncertainty into a staged sourcing option with explicit evidence gates."},
-{name:"Plan C — Hold the award until the model is rebuilt",desc:"Keep the current supplier allocation until tooling, quality, and engineering-support variables are formally added, the model is revalidated, and the cross-functional team approves a new recommendation.",trade:"Maximizes analytical completeness before changing supply; delays the 8% savings and risks treating model redevelopment as a prerequisite for operational learning that could be obtained through a controlled pilot.",chips:["No volume shift","Model rebuild","Maximum pre-award analysis"],gain:118,d:{profit:-3,customer:12,resilience:14,innovation:9},explain:"This is conservative and defensible for a very high-consequence launch, but it gives up the opportunity to learn through a limited, reversible award. The model does not need to be perfect before the business can run a controlled experiment."}
+{name:"Plan A — 80% award with strict rollback triggers",desc:"Capture the modeled savings immediately, require heightened quality/engineering reviews, and establish an executive rollback trigger if launch milestones fail.",trade:"Fastest savings and simplest commercial award; largest exposure to variables that have not yet been observed in the new tooling environment.",cash:25000,d:{profit:13,customer:3,resilience:2,innovation:9},chips:["80% award","Rollback trigger","Fast savings"],explain:"This is financially attractive and can work when the organization has strong monitoring. It carries the largest downside if the unmodeled launch risks materialize before rollback."},
+{name:"Plan B — 50% phased award with evidence gates",desc:"Shift 50% initially, run the pilot/tooling transfer, define quality and engineering-support gates, then increase toward 80% only if those gates are passed.",trade:"Captures only part of the savings now and requires dual-source coordination, but preserves reversibility and generates direct evidence about the model’s blind spots.",cash:55000,d:{profit:8,customer:11,resilience:14,innovation:12},chips:["50% phase 1","Evidence gates","Dual-source"],explain:"This is a robust option when uncertainty is high. It sacrifices some immediate savings in exchange for better information and the ability to reverse course."},
+{name:"Plan C — Hold current award, rebuild decision model, then rebid",desc:"Keep the incumbent allocation for one quarter, add tooling/quality/engineering variables, revalidate the model, and conduct a full cross-functional sourcing review before changing volume.",trade:"Lowest operational transition risk but delays savings and learning from a controlled production trial. It also consumes management time without generating new supplier production evidence.",cash:70000,d:{profit:-4,customer:9,resilience:10,innovation:5},chips:["One-quarter hold","Model rebuild","Full review"],explain:"This is the most conservative governance path. It can be appropriate when customer or launch risk is extremely high, but it gives up savings and the option value of learning through a smaller reversible commitment."}
 ]}
 ];
 
-function reset(){round=0;score=0;m={profit:70,customer:70,resilience:60,innovation:55};history=[]}
-function updateHud(){$("roundKpi").textContent=(round+1)+" / 5";$("progress").style.width=(100*round/5)+"%";$("scoreKpi").textContent=score;$("profitKpi").textContent=Math.round(m.profit);$("customerKpi").textContent=Math.round(m.customer);$("resilienceKpi").textContent=Math.round(m.resilience);$("innovationKpi").textContent=Math.round(m.innovation);drawChart()}
+function reset(){
+round=0;
+score=0;
+m={profit:70,customer:70,resilience:60,innovation:55};
+history=[];
+state={cash:1200000,overrun:0,choices:[],aiPilot:null};
+}
+function updateHud(){
+$("roundKpi").textContent=(round+1)+" / 5";
+$("progress").style.width=(100*round/5)+"%";
+const cashText=(state&&state.cash>=0?"$":"-$")+Math.abs(Math.round((state?state.cash:1200000)/1000))+"K";
+$("scoreKpi").textContent=cashText;
+$("scoreKpi").className=(state&&state.cash<0)?"cash-negative":"";
+$("profitKpi").textContent=Math.round(m.profit);
+$("customerKpi").textContent=Math.round(m.customer);
+$("resilienceKpi").textContent=Math.round(m.resilience);
+$("innovationKpi").textContent=Math.round(m.innovation);
+drawChart();
+}
 function render(){
 updateHud();
 const r=rounds[round];
@@ -280,24 +307,131 @@ $("roundPanel").innerHTML=
 <div class="choices">${r.opts.map((o,i)=>`<button class="choice" data-choice="${i}"><h3>${o.name}</h3><div class="muted">${o.desc}</div><div class="choice-note"><b>Decision terms:</b> ${o.trade}</div><div class="chips">${o.chips.map(c=>`<span class="chip">${c}</span>`).join("")}</div></button>`).join("")}</div>`;
 document.querySelectorAll("[data-choice]").forEach(b=>b.addEventListener("click",()=>choose(+b.dataset.choice)));
 }
+
+function applyPathEffects(roundIndex,choiceIndex,base){
+const d={...base};
+let note="";
+
+// R2: If cash is already constrained, expensive expedite is less attractive.
+if(roundIndex===1){
+ if(choiceIndex===0 && state.cash<700000){d.profit-=6; note+="Because Round 1 already consumed significant crisis cash, the full-expedite plan creates an additional financing/profit penalty. ";}
+ if(choiceIndex===2 && m.customer<65){d.customer-=5; note+="Because customer performance was already weak entering this round, choosing no expedite causes a larger relationship penalty. ";}
+}
+
+// R3: affordability and change capacity.
+if(roundIndex===2){
+ if(state.cash<300000 && choiceIndex!==2){d.profit-=8; d.innovation-=3; note+="The selected pilot exceeds comfortable remaining cash, forcing cuts elsewhere and increasing implementation strain. ";}
+ if(m.resilience<65 && choiceIndex===0){d.resilience+=4; note+="Low existing resilience increases the marginal value of supplier-exception visibility. ";}
+ if(m.customer<65 && choiceIndex===1){d.customer+=4; note+="Weak customer performance increases the value of improving planning quality. ";}
+}
+
+// R4: customer risk vs cash changes which response is best.
+if(roundIndex===3){
+ if(m.customer<70 && choiceIndex===1){d.customer+=5; d.resilience+=3; note+="Because service was already weak, the temporary capacity hedge has unusually high value. ";}
+ if(m.customer>=80 && choiceIndex===0){d.profit+=4; note+="Because customer performance was already strong, avoiding the lease preserves value while the team attacks root cause. ";}
+ if(state.cash<500000 && choiceIndex===2){d.profit-=10; d.resilience-=3; note+="The permanent tester strains the remaining crisis reserve and reduces financial resilience. ";}
+}
+
+// R5: prior AI pilot changes monitoring capability.
+if(roundIndex===4){
+ if(state.aiPilot==="supplier" && choiceIndex===0){d.resilience+=5; d.customer+=3; note+="The earlier supplier-risk pilot gives RidgeLine stronger monitoring and makes the 80% award somewhat safer. ";}
+ if(state.aiPilot==="supplier" && choiceIndex===1){d.innovation+=4; note+="The phased award can reuse the supplier-risk pilot as a monitoring feedback loop. ";}
+ if(state.aiPilot!=="supplier" && choiceIndex===0){d.resilience-=5; note+="RidgeLine lacks the enhanced supplier-risk monitoring that would make a rapid 80% award easier to govern. ";}
+ if(m.resilience<65 && choiceIndex===2){d.resilience+=3; note+="With a fragile network entering the decision, the conservative hold has somewhat more value. ";}
+}
+return {d,note};
+}
+
+function portfolioScore(){
+const vals=[m.profit,m.customer,m.resilience,m.innovation];
+const avg=vals.reduce((a,b)=>a+b,0)/vals.length;
+const variance=vals.reduce((s,x)=>s+(x-avg)*(x-avg),0)/vals.length;
+const imbalancePenalty=Math.sqrt(variance)*0.45;
+const minMetric=Math.min(...vals);
+const floorPenalty=minMetric<55?(55-minMetric)*0.9:0;
+const cashPenalty=state.cash<0?Math.min(20,Math.abs(state.cash)/35000):0;
+const weighted=.28*m.profit+.27*m.customer+.27*m.resilience+.18*m.innovation;
+return Math.round(Math.max(0,Math.min(100,weighted-imbalancePenalty-floorPenalty-cashPenalty)));
+}
+
 function choose(i){
 const r=rounds[round],o=r.opts[i];
-score+=o.gain;
-Object.keys(o.d).forEach(k=>m[k]=clamp(m[k]+o.d[k]));
+
+state.choices.push(i);
+state.cash-=o.cash||0;
+if(state.cash<0){
+ state.overrun+=Math.abs(state.cash);
+ // financing / opportunity-cost penalty for going below zero
+ m.profit=clamp(m.profit-6);
+}
+
+if(round===2){
+ state.aiPilot=i===0?"supplier":(i===1?"forecast":"copilot");
+}
+
+const adjusted=applyPathEffects(round,i,o.d);
+Object.keys(adjusted.d).forEach(k=>m[k]=clamp(m[k]+adjusted.d[k]));
+
 history.push({profit:m.profit,customer:m.customer,resilience:m.resilience,innovation:m.innovation});
-document.querySelectorAll("[data-choice]").forEach((b,j)=>{b.disabled=true;b.style.opacity=j===i?"1":".38"});
+
+document.querySelectorAll("[data-choice]").forEach((b,j)=>{
+ b.disabled=true;
+ b.style.opacity=j===i?"1":".38";
+});
+
+const cashAfter=(state.cash>=0?"$":"-$")+Math.abs(Math.round(state.cash/1000))+"K";
 const p=$("roundPanel");
-p.innerHTML+=`<div class="result"><div class="scoregain">+${o.gain} points</div><h3>Business outcome</h3><div>${o.explain}</div>
-<div class="delta-grid"><div class="delta"><span>Profit</span><b>${Math.round(m.profit)}</b></div><div class="delta"><span>Customer</span><b>${Math.round(m.customer)}</b></div><div class="delta"><span>Resilience</span><b>${Math.round(m.resilience)}</b></div><div class="delta"><span>Innovation</span><b>${Math.round(m.innovation)}</b></div></div>
-<div class="validation-note"><b>Why the scoring logic makes sense:</b> ${r.validation}</div>
+p.innerHTML+=`<div class="result">
+<div class="scoregain">Decision locked — ${cashAfter} crisis cash remaining</div>
+<h3>Business outcome</h3>
+<div>${o.explain}</div>
+${adjusted.note?`<div class="portfolio-warning"><b>Path-dependent effect:</b> ${adjusted.note}</div>`:""}
+<div class="delta-grid">
+<div class="delta"><span>Profit</span><b>${Math.round(m.profit)}</b></div>
+<div class="delta"><span>Customer</span><b>${Math.round(m.customer)}</b></div>
+<div class="delta"><span>Resilience</span><b>${Math.round(m.resilience)}</b></div>
+<div class="delta"><span>Innovation</span><b>${Math.round(m.innovation)}</b></div>
+</div>
+<div class="validation-note"><b>Why the logic makes sense:</b> ${r.validation}</div>
 <div class="summit-connect"><b>Why this matters at the Summit:</b> ${r.connect}</div>
-<div class="buttonrow"><button id="continueBtn" class="primary">${round===4?"See my Summit profile":"Next challenge"}</button></div></div>`;
+<div class="buttonrow"><button id="continueBtn" class="primary">${round===4?"See my Summit profile":"Next challenge"}</button></div>
+</div>`;
+
 $("continueBtn").scrollIntoView({behavior:"smooth",block:"center"});
-$("continueBtn").addEventListener("click",()=>{if(round===4)finish();else{round++;render();window.scrollTo({top:0,behavior:"smooth"})}});
+$("continueBtn").addEventListener("click",()=>{
+ if(round===4)finish();
+ else{round++;render();window.scrollTo({top:0,behavior:"smooth"})}
+});
 updateHud();
 }
 function drawChart(){const svg=$("chart");if(!svg)return;while(svg.firstChild)svg.removeChild(svg.firstChild);const NS="http://www.w3.org/2000/svg",W=800,H=235,p={l:45,r:15,t:22,b:32},el=(n,a,t)=>{const x=document.createElementNS(NS,n);Object.entries(a||{}).forEach(([k,v])=>x.setAttribute(k,v));if(t!=null)x.textContent=t;return x};for(let g=0;g<=4;g++){const y=p.t+(H-p.t-p.b)*g/4;svg.appendChild(el("line",{x1:p.l,y1:y,x2:W-p.r,y2:y,stroke:"#e8edf1"}));svg.appendChild(el("text",{x:p.l-7,y:y+4,"text-anchor":"end","font-size":"10",fill:"#6c7782"},100-25*g))}if(!history.length){svg.appendChild(el("text",{x:W/2,y:H/2,"text-anchor":"middle","font-size":"13",fill:"#87919b"},"Your performance appears after Round 1"));return}const series=[["profit","#0033A0","Profit"],["customer","#16784b","Customer"],["resilience","#946200","Resilience"],["innovation","#6941c6","Innovation"]];series.forEach(([k,c])=>{const pts=history.map((d,i)=>{const x=p.l+(W-p.l-p.r)*i/Math.max(1,history.length-1),y=H-p.b-(H-p.t-p.b)*d[k]/100;return `${x},${y}`}).join(" ");svg.appendChild(el("polyline",{points:pts,fill:"none",stroke:c,"stroke-width":3,"stroke-linecap":"round","stroke-linejoin":"round"}))});history.forEach((d,i)=>{const x=p.l+(W-p.l-p.r)*i/Math.max(1,history.length-1);svg.appendChild(el("text",{x,y:H-10,"text-anchor":"middle","font-size":"10",fill:"#64717d"},"R"+(i+1)))});let lx=p.l;series.forEach(([k,c,l])=>{svg.appendChild(el("line",{x1:lx,y1:11,x2:lx+18,y2:11,stroke:c,"stroke-width":3}));svg.appendChild(el("text",{x:lx+23,y:15,"font-size":"10",fill:"#53606c"},l));lx+=100})}
-function finish(){const final=Math.round((score/635)*100);const profile=final>=88?"Executive Supply Chain Strategist":final>=76?"Resilient Business Builder":final>=64?"Operations Problem Solver":"Emerging Business Leader";$("gameView").classList.add("hidden");$("finalView").classList.remove("hidden");$("finalScore").textContent=final+"/100";$("profile").textContent=profile;$("finalText").textContent=`${name}, you managed five problems that cut across sourcing, customer prioritization, AI, operational excellence, and executive judgment. Those disciplines increasingly overlap in real organizations.`;const strengths=[["Supply-chain resilience",m.resilience,"Executive speakers at the Summit bring experience in global supply chains, materials, supplier relationships, logistics and operations."],["AI & digital business",m.innovation,"The AI workshop focuses on moving from experimentation toward practical business value."],["Operational excellence",(m.profit+m.customer)/2,"Lean Six Sigma provides a structured way to attack waste, process variation and root causes."],["Leadership & judgment",(m.customer+m.innovation)/2,"The critical-thinking workshop explores the human judgment needed when AI provides insight but not complete context."]].sort((a,b)=>b[1]-a[1]);$("profileCards").innerHTML=strengths.slice(0,3).map((x,i)=>`<div class="profile-card"><b>#${i+1} ${x[0]}</b><div class="muted">${x[2]}</div></div>`).join("");window.scrollTo({top:0,behavior:"smooth"})}
+function finish(){
+const final=portfolioScore();
+let profile=final>=85?"Enterprise Supply Chain Strategist":final>=75?"Balanced Resilience Leader":final>=65?"Tradeoff Manager":"Crisis Decision Maker";
+$("gameView").classList.add("hidden");
+$("finalView").classList.remove("hidden");
+$("finalScore").textContent=final+"/100";
+$("profile").textContent=profile;
+
+const cashText=(state.cash>=0?"$":"-$")+Math.abs(Math.round(state.cash/1000))+"K";
+$("finalText").textContent=`${name}, your final result is based on the portfolio you created—not on accumulating points for individual answers. You finished with ${cashText} of crisis cash, and the score penalizes both weak metrics and an unbalanced strategy.`;
+
+const vals=[
+["Profit",m.profit,"Short-term economics and financial flexibility"],
+["Customer",m.customer,"Service, criticality, and relationship protection"],
+["Resilience",m.resilience,"Continuity, reversibility, and exposure reduction"],
+["Innovation",m.innovation,"Digital capability, learning, and adoption"]
+];
+const sorted=[...vals].sort((a,b)=>b[1]-a[1]);
+const weakest=[...vals].sort((a,b)=>a[1]-b[1])[0];
+
+$("profileCards").innerHTML=
+`<div class="profile-card"><b>Strongest dimension: ${sorted[0][0]} (${Math.round(sorted[0][1])})</b><div class="muted">${sorted[0][2]}</div></div>
+<div class="profile-card"><b>Constraint on your portfolio: ${weakest[0]} (${Math.round(weakest[1])})</b><div class="muted">${weakest[2]}. The final score intentionally penalizes strategies that maximize one objective by sacrificing another.</div></div>
+<div class="profile-card"><b>Cash remaining: ${cashText}</b><div class="muted">${state.cash<0?"You exceeded the $1.20M crisis reserve, which created a financing/opportunity-cost penalty.":"Unused cash preserved option value, but excessive cash preservation can also reduce service or resilience if underinvestment caused weak operating outcomes."}</div></div>`;
+
+window.scrollTo({top:0,behavior:"smooth"});
+}
 $("startBtn").addEventListener("click",()=>{reset();name=$("playerName").value.trim()||"Business Leader";$("startView").classList.add("hidden");$("gameView").classList.remove("hidden");render();window.scrollTo({top:0,behavior:"smooth"})});
 $("replayBtn").addEventListener("click",()=>{$("finalView").classList.add("hidden");$("startView").classList.remove("hidden");window.scrollTo({top:0,behavior:"smooth"})});
 reset();

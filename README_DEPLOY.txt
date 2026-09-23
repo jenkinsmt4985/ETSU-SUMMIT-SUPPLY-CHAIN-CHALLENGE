@@ -10,7 +10,7 @@ WHAT CHANGED IN THIS EDITION
 - Choices use supply-chain terminology and strategic decision frameworks.
 - Each outcome explains why the scoring logic makes sense.
 - Final page includes all people identifiable from the current public Eventbrite
-  lineup/agenda plus the event organizer, with concise bios and source links.
+  lineup/agenda plus the event organizer, with concise bios.
 - Added a visible "decision logic" section explaining the external professional
   guidance used to validate the scenarios.
 
@@ -112,3 +112,30 @@ This edition intentionally makes the decisions less obvious:
 
 UPDATED MAXIMUM SCORE
 635 points.
+
+PRESENTER LINK UPDATE
+Professional/source links were removed from the presenter bio cards. The Eventbrite registration link and decision-validation reference links remain.
+
+
+PORTFOLIO-TRADEOFF REVISION
+This version removes quiz-style round scoring.
+
+Key changes:
+- No visible "+points" are awarded after a choice.
+- Every choice improves some objectives and worsens others.
+- A $1.20M discretionary crisis-cash constraint carries across all five rounds.
+- Spending heavily early can prevent or penalize later investments.
+- Round outcomes are path-dependent.
+- The Round 3 AI choice changes the risk profile of the final AI/sourcing decision.
+- The value of temporary capacity in Round 4 depends partly on the customer-service
+  condition created by earlier choices.
+- Final score is calculated from profit, customer, resilience, and innovation, with
+  penalties for:
+    * excessive imbalance among objectives,
+    * any metric falling below a minimum performance floor,
+    * overspending the crisis reserve.
+- There is no fixed positional pattern (middle/left/right) that maximizes results.
+- The optimized result depends on the portfolio of choices.
+
+This is intentionally designed as a multi-objective decision simulation rather than
+a multiple-choice quiz.
