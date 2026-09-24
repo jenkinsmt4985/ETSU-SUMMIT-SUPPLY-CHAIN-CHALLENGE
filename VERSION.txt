@@ -17,3 +17,6 @@ This build has been verified to include:
 Open index.html from THIS folder.
 
 index.html SHA256: 5067374e61e0a2c7c5aa0cd6dc01a34d56407a0f7e74050f8dd267b89663db43
+
+FINAL IMAGE BUILD
+Includes all 5 scenario images and the FREE TO ATTEND — REGISTRATION IS REQUIRED notice.
